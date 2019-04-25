@@ -28,7 +28,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "debug.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,8 +96,8 @@ int main(void)
   MX_TIM17_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
-  /* USER CODE BEGIN 2 */
-
+  /* USER CODE BEGIN 2 */	
+	jiprintf( "\r\n\nStart RTOS Test...\r\n" );
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
