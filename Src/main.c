@@ -97,7 +97,13 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */	
-	jiprintf( "\r\n\nStart RTOS Test...\r\n" );
+	jiprintf( "\r\n\nStart RTOS Test...(%s)\r\n", __DATE__ );
+	
+	/* Gpio Init for LED -------------------------------------------------------*/
+	HAL_GPIO_WritePin( LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET );							// RTOS start
+	HAL_GPIO_WritePin( LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET );
+	HAL_GPIO_WritePin( LED3_GPIO_Port, LED3_Pin, GPIO_PIN_RESET );
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

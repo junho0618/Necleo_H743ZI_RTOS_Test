@@ -20,10 +20,12 @@ extern "C" {
 	#define jprintf( fmt, args... )			printf( fmt, ##args );																		// Normal Print
 	#define	jiprintf( fmt, args... )		printf( "\033[33m" ); printf( fmt, ##args ); printf( "\033[0m" );							// Info Print
 	#define	jeprintf( fmt, args... )		printf( "\033[31m" ); printf( "%s : " fmt, __FUNCTION__ , ##args ); printf( "\033[0m" );	// Error Print
+	#define jnprintf()						printf( "\r\n" );																			// New Line Print
 #else
 	#define jprintf(x...) do { } while (0)
 	#define jiprintf(x...) do { } while (0)
 	#define jeprintf(x...) do { } while (0)
+	#define jnprintf() do { } while(0)
 #endif
 
 #ifdef __cplusplus

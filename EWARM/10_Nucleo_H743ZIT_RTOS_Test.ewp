@@ -1012,7 +1012,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>10_Nucleo_H743ZIT_RTOS_Test_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1053,6 +1053,9 @@
             <name>Common</name>
             <file>
                 <name>$PROJ_DIR$\..\Common\debug.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Common\ringbuff.c</name>
             </file>
         </group>
         <group>
